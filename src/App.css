@@ -1,42 +1,119 @@
-
-
-
-
-.App {
-  text-align: center;
+nav {
+  width: 100%;
+  /* backdrop-filter: blur(2px); */
+  z-index: 1000;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.header {
+  background-image: url(./assets/img/illustrations/hero-bg.png);
+  background-position: right top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header_input {
+  box-shadow: -2px 5px 28px 10px rgba(34, 60, 80, 0.07);
+  outline: none;
+}
+.header_bgImg {
+  margin-top: -170px;
+  width: 100%;
+  height: 250px;
+  background-image: url(./assets//img//illustrations//bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bg_Category {
+  background-image: url(./assets/img/illustrations/Category-bg.png);
+  background-position: right top;
+  background-size: 200px 320px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  height: 320px;
+  margin-top: -100px;
+  /* position: absolute; */
+  /* z-index: -1; */
+}
+.category_card {
+  box-shadow: -2px 5px 28px 10px rgba(34, 60, 80, 0.07);
+  transition: 0.5s ease;
+  /* z-index: 99; */
+}
+.category_card:hover {
+  background-color: #53acf8;
+  transform: translateY(-2px);
+}
+.category_card:hover > .card_text {
+  color: #fff;
+}
+.footer {
+  background-image: url(./assets/img/illustrations/footer-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+.carusel_card {
+  box-shadow: -2px 5px 28px 10px rgba(34, 60, 80, 0.07);
+}
+.carusel_img {
+  margin-top: -130px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 768px) {
+  .carusel_card {
+    width: 205px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 425px) {
+  .bg_Category {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .header {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+  }
+  .header input {
+    width: 320px;
+  }
+  .second_Text {
+    order: 2;
+  }
+  .second_img {
+    order: 1;
+  }
+  .footer_bottom {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .carusel_card {
+    margin-top: 90px;
+    width: 340px;
+  }
+  .carusel_left {
+    margin-left: 250px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+  }
+  .header input {
+    width: 290px;
+  }
+  .foot_center {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  .carusel_card {
+    margin-top: 90px;
+    width: 256px;
+  }
+  .carusel_left {
+    margin-left: 210px !important;
   }
 }
